@@ -1,0 +1,108 @@
+/* =================================
+   MASTER STYLESHEET - YAYASAN PURBA DANARTA
+   ================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #3B82F6;
+    --background-color: #F9FAFB;
+    --card-background-color: #FFFFFF;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --border-color: #E5E7EB;
+    --danger-color: #EF4444;
+    --success-color: #10B981;
+    --warning-color: #F59E0B;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Layout Utama --- */
+.wrapper { display: flex; }
+.sidebar {
+    width: 280px; background-color: var(--card-background-color); height: 100vh;
+    position: fixed; border-right: 1px solid var(--border-color);
+    padding: 20px; box-sizing: border-box; overflow-y: auto;
+}
+.main-content {
+    margin-left: 280px; padding: 30px; width: calc(100% - 280px);
+    box-sizing: border-box;
+}
+
+/* --- Sidebar --- */
+.sidebar-header { text-align: center; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; }
+.sidebar-logo { max-width: 150px; height: auto; }
+.sidebar-nav { list-style: none; padding: 0; margin: 0; }
+.sidebar-nav .nav-title { font-size: 0.7rem; font-weight: 700; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.05em; margin: 25px 0 10px 15px; }
+.sidebar-nav li a {
+    display: flex; align-items: center; padding: 12px 18px; text-decoration: none;
+    color: var(--text-secondary); border-radius: 8px; margin-bottom: 5px; font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.sidebar-nav li a:hover { background-color: #F3F4F6; color: var(--text-primary); }
+.sidebar-nav li.active a { background-color: var(--primary-color); color: #fff; }
+.sidebar-nav li a i { margin-right: 15px; font-size: 1rem; width: 20px; text-align: center; }
+
+/* --- Header Konten Utama --- */
+.main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.header-left .title { margin: 0; font-size: 1.8rem; font-weight: 700; }
+.header-left .subtitle { margin: 5px 0 0 0; color: var(--text-secondary); }
+.user-profile { display: flex; align-items: center; gap: 15px; }
+.user-profile .icon { font-size: 1.5rem; color: #9CA3AF; }
+.user-info strong { display: block; color: var(--text-primary); font-weight: 600; }
+.user-info span { font-size: 0.85rem; color: var(--text-secondary); }
+.logout-btn {
+    text-decoration: none; color: var(--danger-color); font-weight: 500; padding: 8px 15px;
+    border-radius: 8px; background-color: #FEF2F2; display: flex; align-items: center; gap: 8px;
+    transition: all 0.2s ease;
+}
+.logout-btn:hover { background-color: var(--danger-color); color: #fff; }
+
+/* --- Kontainer & Kartu --- */
+.card {
+    background-color: var(--card-background-color); padding: 25px; border-radius: 12px;
+    border: 1px solid var(--border-color); box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.section { margin-bottom: 30px; }
+.summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+.stats-card { background-color: var(--card-background-color); padding: 25px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+
+/* --- Tabel --- */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); text-align: left; vertical-align: middle; }
+th { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-secondary); background-color: #F9FAFB; }
+tr:last-child td { border-bottom: none; }
+
+/* --- Form --- */
+.form-container-wrapper { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 40px 20px; box-sizing: border-box; }
+.form-container { background-color: var(--card-background-color); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 100%; max-width: 600px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #D1D5DB;
+    box-sizing: border-box; font-size: 1rem; font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+.form-row { display: flex; gap: 20px; }
+.form-row .form-group { flex: 1; }
+.submit-button {
+    width: 100%; padding: 12px; background-color: var(--primary-color); color: #fff;
+    border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.submit-button:hover { background-color: #2563EB; }
+.message { padding: 15px; margin-bottom: 20px; border-radius: 8px; border: 1px solid transparent; }
+.message.success { background-color: #D1FAE5; color: #065F46; border-color: #A7F3D0; }
+.message.error { background-color: #FEE2E2; color: #991B1B; border-color: #FECACA; }
+.form-group.hidden { display: none; }

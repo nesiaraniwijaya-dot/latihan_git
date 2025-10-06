@@ -1,0 +1,111 @@
+/* Styling untuk Dashboard Internal (Karyawan, dll) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+body { font-family: 'Poppins', sans-serif; background-color: #f4f7fc; margin: 0; color: #333; }
+.dashboard-wrapper { display: flex; }
+.sidebar { width: 260px; background-color: #fff; height: 100vh; position: fixed; border-right: 1px solid #e0e0e0; padding: 20px; box-sizing: border-box; }
+.sidebar-header { text-align: center; margin-bottom: 30px; }
+.sidebar-logo { max-width: 80px; margin-bottom: 10px; }
+.sidebar-header h3 { margin: 0; font-size: 1.2rem; color: #007bff; }
+.sidebar-nav ul { list-style: none; padding: 0; margin: 0; }
+.sidebar-nav li a { display: flex; align-items: center; padding: 12px 15px; text-decoration: none; color: #555; border-radius: 8px; margin-bottom: 5px; transition: background-color 0.3s, color 0.3s; }
+.sidebar-nav li a:hover, .sidebar-nav li.active a { background-color: #007bff; color: #fff; }
+.sidebar-nav li a i { margin-right: 15px; font-size: 1.1rem; width: 20px; text-align: center; }
+.main-content { margin-left: 260px; padding: 30px; width: calc(100% - 260px); }
+.main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.main-header .welcome-message h2 { margin: 0; font-size: 1.8rem; }
+.main-header .welcome-message p { margin: 5px 0 0 0; color: #888; }
+.logout-button-dashboard { text-decoration: none; color: #d9534f; font-weight: 600; padding: 10px 15px; border-radius: 8px; transition: background-color 0.2s; background-color: #fbeeee; }
+.logout-button-dashboard:hover { background-color: #f8d7da; }
+.summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 30px; }
+.card { background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative; }
+.card h4 { margin: 0 0 10px 0; font-size: 1rem; color: #888; font-weight: 500; }
+.card .card-value { margin: 0; font-size: 2.5rem; font-weight: 700; }
+.card .card-value span { font-size: 1rem; font-weight: 500; color: #aaa; margin-left: 5px; }
+.card .card-text { margin: 0; font-size: 1.1rem; font-weight: 600; }
+.card .card-icon { position: absolute; top: 25px; right: 25px; font-size: 2rem; color: #e0e0e0; }
+.status-badge-ajuan { display: inline-block; padding: 5px 12px; border-radius: 15px; font-weight: 600; font-size: 0.8rem; margin-top: 10px; }
+.status-badge-ajuan.menunggu-persetujuan { background-color: #fff3cd; color: #856404; }
+.status-badge-ajuan.disetujui { background-color: #d4edda; color: #155724; }
+.status-badge-ajuan.ditolak { background-color: #f8d7da; color: #721c24; }
+.recent-activities { background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.recent-activities h3 { margin: 0 0 20px 0; }
+/* CSS untuk Halaman Formulir */
+.content-form { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.form-group { margin-bottom: 20px; }
+/* Tambahan CSS untuk form di dalam manager_style */
+.content-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+.form-group-row .form-group {
+    flex: 1;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    width: auto; /* Agar tombol tidak full width */
+}
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.form-group.hidden {
+    display: none;
+}
+/* Tambahan CSS untuk form upload tersembunyi */
+.form-group.hidden {
+    display: none;
+}
+.form-group-row { display: flex; gap: 20px; }
+.form-group-row .form-group { flex: 1; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: #555; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; font-size: 1rem; font-family: 'Poppins', sans-serif; }
+.submit-button { background-color: #007bff; color: #fff; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; font-weight: 500; }
+.submit-button:hover { background-color: #0056b3; }
+.message { padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+.message.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.message.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
