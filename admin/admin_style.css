@@ -1,0 +1,141 @@
+/* Styling Baru untuk Dashboard Admin */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F9FAFB;
+    margin: 0;
+    color: #374151;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #111827;
+    font-weight: 700;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; margin-top: 40px; }
+
+p { color: #6B7280; }
+
+.nav-links {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    background-color: #fff;
+    color: #3B82F6;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid #E5E7EB;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #EFF6FF;
+    border-color: #DBEAFE;
+}
+
+.nav-links a.active {
+    background-color: #3B82F6;
+    color: #fff;
+    border-color: #3B82F6;
+}
+
+.section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #E5E7EB;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffffff;
+    background-color: #1c77c6ff;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.action-link-view, .action-btn-terima, .action-btn-tolak {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    margin: 2px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.action-link-view { background-color: #3B82F6; }
+.action-btn-terima { background-color: #10B981; }
+.action-btn-tolak { background-color: #EF4444; }
+
+.action-link-view:hover, .action-btn-terima:hover, .action-btn-tolak:hover {
+    opacity: 0.85;
+}
+
+.status-lulus { color: #059669; font-weight: bold; }
+.status-gagal { color: #DC2626; font-weight: bold; }
+.status-belum-dinilai { color: #6B7280; font-style: italic; }
+
+/* Style untuk Kotak Info/Notifikasi */
+.info-box {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+.info-box.warning {
+    background-color: #FFFBEB;
+    color: #B45309;
+    border: 1px solid #FDE68A;
+}
+.info-box i {
+    font-size: 1.2rem;
+    margin-right: 12px;
+}
